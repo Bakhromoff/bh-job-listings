@@ -22,6 +22,7 @@
   --text-color-dark: #7c8f8f;
   --bg-color: #F2F2F2;
   --text-color-lightblue: #5ca5a5;
+  --lightblue60: rgba(92, 165, 165, 0.6);
   --black-text-color: #2b3939;
 }
 
@@ -35,6 +36,10 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+*:focus{
+  outline: 2px dashed var(--text-color-lightblue);
+  outline-offset: 4px;
 }
 .visually-hidden {
 	position: absolute !important;
@@ -165,12 +170,22 @@ img {
   letter-spacing: -0.09px;
 }
 .job-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+.job-title-link{
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: var(--black-text-color);
-  margin-top: 0;
-  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.4s ease, opacity 0.4s ease;
+}
+.job-title-link:hover{
+  color: var(--text-color-lightblue);
+}
+.job-title-link:active {
+  opacity: 0.6;
 }
 .job-info {
   display: flex;
@@ -209,18 +224,27 @@ img {
   list-style: none;
 }
 .knowledge-item {
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: rgba(92, 165, 165, 0.1);
+
 }
 .knowledge-item:not(:last-child){
   margin-right: 16px;
 }
 .knowledge-item-link{
+  border-radius: 4px;
   text-decoration: none;
   font-weight: 700;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: -0.1px;
   color: var(--text-color-lightblue);
+  background-color: rgba(92, 165, 165, 0.1);
+  padding: 4px 8px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+.knowledge-item-link:hover {
+  background-color: var(--text-color-lightblue);
+  color: #fff;
+}
+.knowledge-item-link:active {
+  background-color: var(--lightblue60);
 }
