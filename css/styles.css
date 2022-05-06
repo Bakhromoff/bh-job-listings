@@ -59,7 +59,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "League Spartan", "Arial", sans-serif;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 15px;
   line-height: 1.6;
   background-color: var(--bg-color);
@@ -138,14 +138,12 @@ img {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   margin-right: 16px;
 }
 .new {
   display: inline-block;
-  font-weight: 700;
   font-size: 11px;
   line-height: 14px;
   text-align: center;
@@ -158,7 +156,6 @@ img {
   margin-right: 8px;
 }
 .jobs-feature {
-  font-weight: 700;
   font-size: 11px;
   line-height: 14px;
   text-align: center;
@@ -174,7 +171,6 @@ img {
   margin-bottom: 8px;
 }
 .job-title-link{
-  font-weight: 700;
   font-size: 18px;
   line-height: 24px;
   color: var(--black-text-color);
@@ -192,6 +188,7 @@ img {
   align-items: center;
 }
 .vacancy-time {
+  font-weight: 500;
   display: block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
@@ -206,12 +203,14 @@ img {
   border-radius: 50%;
 }
 .job-type {
+  font-weight: 500;
   display: block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
   margin-right: 16px;
 }
 .job-distance {
+  font-weight: 500;
   display: block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
@@ -232,7 +231,6 @@ img {
 .knowledge-item-link{
   border-radius: 4px;
   text-decoration: none;
-  font-weight: 700;
   font-size: 13px;
   line-height: 24px;
   letter-spacing: -0.1px;
