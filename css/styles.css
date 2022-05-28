@@ -1,7 +1,7 @@
 @font-face {
   font-family: "League Spartan";
   src: url("../fonts/LeagueSpartan-Bold.woff2") format("woff2"),
-      url("../fonts/LeagueSpartan-Bold.woff") format("woff");
+  url("../fonts/LeagueSpartan-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -10,7 +10,7 @@
 @font-face {
   font-family: "League Spartan";
   src: url("../fonts/LeagueSpartan-Medium.woff2") format("woff2"),
-      url("../fonts/LeagueSpartan-Medium.woff") format("woff");
+  url("../fonts/LeagueSpartan-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -42,14 +42,14 @@ html {
   outline-offset: 4px;
 }
 .visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important;
-	width: 1px !important;
-	overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
 
 body {
@@ -81,6 +81,15 @@ img {
   margin-right: auto;
 }
 
+/* SITE HEADER */
+
+
+.site-header {
+  background-color: var(--text-color-lightblue);
+  background-image: url(../img/header-bg.svg);
+  min-height: 156px;
+}
+
 /* MAIN SECTION */
 
 .main-section {
@@ -88,16 +97,11 @@ img {
   padding-top: 76px;
   padding-bottom: 120px;
 }
-.site-header {
-  background-color: var(--text-color-lightblue);
-  background-image: url(../img/header-bg.svg);
-  min-height: 156px;
-}
-.job-lists {
+.jobs__list {
   padding: 0;
   margin: 0;
 }
-.job-item {
+.jobs__item {
   padding: 32px 40px;
   box-shadow: 0px 15px 20px -5px rgba(13, 113, 130, 0.15);
   border-radius: 5px;
@@ -107,56 +111,57 @@ img {
   justify-content: space-between;
   background-color: #fff;
 }
-.job-item:not(:last-child){
+.jobs__item:not(:last-child){
   margin-bottom: 24px;
 }
-.job-item-featured{
+.jobs__item--featured{
   border-left-color: var(--text-color-lightblue);
   padding: 32px 40px 32px 35px;
 }
-.company-info {
+.job-item {
   display: flex;
   align-items: center;
   margin-right: 50px;
 }
-.company-logo-img {
+.job-item__logo {
   width: 88px;
   height: 88px;
   border-radius: 50%;
   margin-right: 24px;
 }
-.job-description {
+.job-item__description {
   display: flex;
   flex-direction: column;
 }
-.job-status {
+.job-item__status {
   display: flex;
   align-items: center;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .company-name {
   display: inline-block;
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 16px;
   margin-right: 16px;
 }
 .new {
   display: inline-block;
-  font-size: 11px;
+  font-size: 15px;
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
-  padding: 5px 8px;
+  padding: 5px 7px;
   background-color: var(--text-color-lightblue);
   color: #fff;
   border-radius: 12px;
   letter-spacing: -0.09px;
   margin-right: 8px;
 }
-.jobs-feature {
-  font-size: 11px;
+.featured {
+  font-size: 14px;
   line-height: 14px;
   text-align: center;
   text-transform: uppercase;
@@ -166,83 +171,107 @@ img {
   border-radius: 12px;
   letter-spacing: -0.09px;
 }
-.job-title {
-  margin-top: 0;
-  margin-bottom: 8px;
+.job-item__title {
+  margin: 0;
 }
-.job-title-link{
-  font-size: 18px;
+.job-item__link{
+  display: inline-block;
+  font-family: "League Spartan", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
   line-height: 24px;
   color: var(--black-text-color);
   text-decoration: none;
   transition: color 0.4s ease, opacity 0.4s ease;
+  margin-top: 0;
+  margin-bottom: 8px;
 }
-.job-title-link:hover{
+.job-item__link:hover{
   color: var(--text-color-lightblue);
 }
-.job-title-link:active {
+.job-item__link:active {
   opacity: 0.6;
 }
-.job-info {
+.vacancy {
   display: flex;
   align-items: center;
 }
-.vacancy-time {
+.vacancy__time {
+  position: relative;
   font-weight: 500;
-  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
-  margin-right: 16px;
 }
-.dark-point{
-  display: block;
+.vacancy__time::after {
   width: 4px;
   height: 4px;
-  background-color: #b7c4c4;
-  margin-right: 16px;
+  content: "";
   border-radius: 50%;
-}
-.job-type {
-  font-weight: 500;
-  display: block;
-  letter-spacing: -0.012px;
-  color: var(--text-color-dark);
+  background-color: #b7c4c4;
+  position: absolute;
+  bottom: 50%;
+  margin-left: 16px;
   margin-right: 16px;
 }
-.job-distance {
+.vacancy__type {
+  position: relative;
   font-weight: 500;
-  display: block;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
+  margin-left: 32px;
 }
-.required-knowledge-list {
+.vacancy__type::after {
+  width: 4px;
+  height: 4px;
+  content: "";
+  border-radius: 50%;
+  background-color: #b7c4c4;
+  position: absolute;
+  bottom: 50%;
+  margin-left: 16px;
+}
+.vacancy__distance {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  display: inline-block;
+  letter-spacing: -0.012px;
+  color: var(--text-color-dark);
+  margin-left: 32px;
+}
+.required-knowledge {
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style: none;
 }
-.knowledge-item {
 
-}
-.knowledge-item:not(:last-child){
+.required-knowledge__item:not(:last-child){
   margin-right: 16px;
 }
-.knowledge-item-link{
+.required-knowledge__link{
   border-radius: 4px;
   text-decoration: none;
-  font-size: 13px;
+  font-weight: 700;
+  font-size: 17px;
   line-height: 24px;
-  letter-spacing: -0.1px;
+  letter-spacing: -0.2px;
   color: var(--text-color-lightblue);
   background-color: rgba(92, 165, 165, 0.1);
   padding: 4px 8px;
   transition: background-color 0.4s ease, color 0.4s ease;
 }
-.knowledge-item-link:hover {
+.required-knowledge__link:hover {
   background-color: var(--text-color-lightblue);
   color: #fff;
 }
-.knowledge-item-link:active {
+.required-knowledge__link:active {
   background-color: var(--lightblue60);
 }
