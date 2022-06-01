@@ -197,34 +197,33 @@ img {
   align-items: center;
 }
 .vacancy__time {
-  position: relative;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  display: inline-block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
 }
 .vacancy__time::after {
   width: 4px;
   height: 4px;
   content: "";
   border-radius: 50%;
+  display: inline-block;
   background-color: #b7c4c4;
-  position: absolute;
-  bottom: 50%;
   margin-left: 16px;
-  margin-right: 16px;
 }
 .vacancy__type {
-  position: relative;
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  display: inline-block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
-  margin-left: 32px;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
 }
 .vacancy__type::after {
   width: 4px;
@@ -232,8 +231,8 @@ img {
   content: "";
   border-radius: 50%;
   background-color: #b7c4c4;
-  position: absolute;
   bottom: 50%;
+  display: inline-block;
   margin-left: 16px;
 }
 .vacancy__distance {
@@ -243,7 +242,6 @@ img {
   display: inline-block;
   letter-spacing: -0.012px;
   color: var(--text-color-dark);
-  margin-left: 32px;
 }
 .required-knowledge {
   padding: 0;
